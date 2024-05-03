@@ -6,20 +6,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
 }
 
 body{
-    font-family: "League Spartan", sans-serif;
     font-weight: 700;
     background-color: $bg-color-100;
 }
 
 main{
-    padding: 100px 14px;
+    padding: 110px 14px;
 }
 
 .calculator-container{
-    // border: 2px solid red;
     max-width: 540px;
     margin: 0 auto;
 }
@@ -32,8 +31,10 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 25px;
+
     .heading-text{
-        font-size: 32px;
+        font-size: 30px;
         color: $text-color-2;
     }
 
@@ -45,7 +46,7 @@ main{
             color: $text-color-2;
             margin-right: 20px;
             letter-spacing: 2px;
-        font-size: 11px;
+            font-size: 11px;
         }
     
         .toggle-container{
@@ -88,9 +89,83 @@ main{
                     width: 14px;
                     background-color: $key2-color;
                     border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .toggle-btn-con{
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                }
+                button{
+                    flex-grow: 1;
+                    cursor: pointer;
+                    opacity: 0;
                 }
             }
         }
     }
 
+}
+
+.calculator-screen{
+    padding: 40px 30px;
+    background-color: $bg-color-300;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+    .calculator-screen-text{
+        color: $text-color-2;
+        text-align: right;
+        font-size: 48px;
+    }
+}
+
+.calculator-keypad{
+    padding: 30px;
+    border-radius: 10px;
+    background-color: $bg-color-200;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    font-weight: 700;
+
+    .key{
+        grid-column: span 1;
+        height: 60px;
+        padding: 12px 10px;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: .2s;
+
+        &.key-1{ // the DEL and RESET keys
+            font-size: 29px;
+            background-color: $key1-color;
+            box-shadow: 0 3px $key1-shadow-color;
+            color: $text-color-2;
+        }
+        &.key-2{ // the equals to key
+            font-size: 33px;
+            background-color: $key2-color;
+            box-shadow: 0 3px $key2-shadow-color;
+            color: $text-color-2;
+        }
+        &.key-3{ // the numbers and arithemetic keys 
+            font-size: 33px;
+            background-color: $key3-color;
+            box-shadow: 0 3px $key3-shadow-color;
+        }
+
+        &:hover{
+            filter: brightness(1.3);
+        }
+        
+        &:nth-child(17),
+        &:nth-child(18){
+            grid-column: span 2;
+        }
+    }
+    
 }
