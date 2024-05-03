@@ -1,0 +1,82 @@
+.general-text {
+  color: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  background-color: hsl(222, 26%, 31%);
+}
+
+main {
+  padding: 100px 14px;
+}
+
+.calculator-container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.calculator-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calculator-top .heading-text {
+  font-size: 32px;
+  color: hsl(0, 0%, 100%);
+}
+.calculator-top .right {
+  display: flex;
+  align-items: center;
+}
+.calculator-top .right .theme-text {
+  color: hsl(0, 0%, 100%);
+  margin-right: 20px;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+.calculator-top .right .toggle-container {
+  position: relative;
+}
+.calculator-top .right .toggle-container .toggle-number-con {
+  display: flex;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  margin-bottom: 7px;
+}
+.calculator-top .right .toggle-container .toggle-number-con span {
+  flex-grow: 1;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 12px;
+}
+.calculator-top .right .toggle-container .toggle {
+  width: 70px;
+  height: 24px;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  position: relative;
+}
+.calculator-top .right .toggle-container .toggle .indicator {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 50%;
+}/*# sourceMappingURL=main.css.map */

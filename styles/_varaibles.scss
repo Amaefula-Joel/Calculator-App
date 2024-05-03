@@ -1,0 +1,23 @@
+// colors
+
+
+//Theme 1
+
+// Background
+$bg-color-100: hsl(222, 26%, 31%); // main background
+$bg-color-200: hsl(223, 31%, 20%); // toggle background, keypad background
+$bg-color-300: hsl(224, 36%, 15%); // screen background
+
+// Keys
+$key1-color: hsl(225, 21%, 49%); // key background
+$key1-shadow-color: hsl(224, 28%, 35%); // key shadow
+
+$key2-color: hsl(6, 63%, 50%); // key background, toggle
+$key2-shadow-color: hsl(6, 70%, 34%); // key shadow
+
+$key3-color: hsl(30, 25%, 89%); // key background
+$key3-shadow-color: hsl(28, 16%, 65%); // key shadow
+
+// Text color
+$text-color-1: hsl(221, 14%, 31%); // Very dark grayish blue
+$text-color-2: hsl(0, 0%, 100%); // white

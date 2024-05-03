@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>Calculator app</title>
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+      
+
+
+    </style>
+</head>
+<body>
+  <div id="app">
+
+
+    <main>
+      <div class="calculator-container">
+        <!-- calculator top starts here -->
+        <div class="calculator-top">
+          <h2 class="heading-text">calc</h2>
+
+          <div class="right">
+            <p class="theme-text">THEME</p>
+
+            <div class="toggle-container">
+              <div class="toggle-number-con">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class="toggle">
+                <span class="indicator"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- calculator top ends here -->
+
+        <!-- calculator output starts here -->
+      </div>
+    </main>
+
+    <!-- {{message}} -->
+  </div>
+
+  
+  
+  <script>
+  
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "Hello World!"
+        }
+      }
+    })
+  
+    app.mount('#app')
+  
+  </script>
+</body>
+</html>
