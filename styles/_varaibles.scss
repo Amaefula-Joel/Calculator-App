@@ -1,23 +1,66 @@
 // colors
 
 
-//Theme 1
+//Theme 1 (Dark Theme)
 
 // Background
-$bg-color-100: hsl(222, 26%, 31%); // main background
-$bg-color-200: hsl(223, 31%, 20%); // toggle background, keypad background
-$bg-color-300: hsl(224, 36%, 15%); // screen background
+$dark-theme-bg-color-100: hsl(222, 26%, 31%); // main background
+$dark-theme-bg-color-200: hsl(223, 31%, 20%); // toggle background, keypad background
+$dark-theme-bg-color-300: hsl(224, 36%, 15%); // screen background
 
 // Keys
-$key1-color: hsl(225, 21%, 49%); // key background
-$key1-shadow-color: hsl(224, 28%, 35%); // key shadow
+$dark-theme-key1-color: hsl(225, 21%, 49%); // key background
+$dark-theme-key1-shadow-color: hsl(224, 28%, 35%); // key shadow
 
-$key2-color: hsl(6, 63%, 50%); // key background, toggle
-$key2-shadow-color: hsl(6, 70%, 34%); // key shadow
+$dark-theme-key2-color: hsl(6, 63%, 50%); // key background, toggle
+$dark-theme-key2-shadow-color: hsl(6, 70%, 34%); // key shadow
 
-$key3-color: hsl(30, 25%, 89%); // key background
-$key3-shadow-color: hsl(28, 16%, 65%); // key shadow
+$dark-theme-key3-color: hsl(30, 25%, 89%); // key background
+$dark-theme-key3-shadow-color: hsl(28, 16%, 65%); // key shadow
 
 // Text color
-$text-color-1: hsl(221, 14%, 31%); // Very dark grayish blue
-$text-color-2: hsl(0, 0%, 100%); // white
+$dark-theme-text-color-1: hsl(221, 14%, 31%); // Very dark grayish blue
+$dark-theme-text-color-2: hsl(0, 0%, 100%); // white
+
+//Theme 2 (Light)
+
+// Background
+$light-theme-bg-color-100: hsl(0, 0%, 90%); // main background
+$light-theme-bg-color-200: hsl(0, 5%, 81%); // toggle background, keypad background
+$light-theme-bg-color-300: hsl(0, 0%, 93%); // screen background
+
+// Keys
+$light-theme-key1-color: hsl(185, 42%, 37%); // key background
+$light-theme-key1-shadow-color: hsl(185, 58%, 25%); // key shadow
+
+$light-theme-key2-color: hsl(25, 98%, 40%); // key background, toggle
+$light-theme-key2-shadow-color: hsl(25, 99%, 27%); // key shadow
+
+$light-theme-key3-color: hsl(45, 7%, 89%); // key background
+$light-theme-key3-shadow-color: hsl(35, 11%, 61%); // key shadow
+
+// Text color
+$light-theme-text-color-1: hsl(60, 10%, 19%); // Very dark grayish yellow
+$light-theme-text-color-2: hsl(0, 0%, 100%); // white
+
+//Theme 3 (Purple)
+
+// Background
+$purple-theme-bg-color-100: hsl(268, 75%, 9%); // main background
+$purple-theme-bg-color-200: hsl(268, 71%, 12%); // toggle background, keypad background. screen background
+
+
+// Keys
+$purple-theme-key1-color: hsl(281, 89%, 26%); // key background
+$purple-theme-key1-shadow-color: hsl(285, 91%, 52%); // key shadow
+
+$purple-theme-key2-color: hsl(176, 100%, 44%); // key background, toggle
+$purple-theme-key2-shadow-color: hsl(177, 92%, 70%); // key shadow
+
+$purple-theme-key3-color: hsl(268, 47%, 21%); // key background
+$purple-theme-key3-shadow-color: hsl(290, 70%, 36%); // key shadow
+
+// Text color
+$purple-theme-text-color-1: hsl(60, 10%, 19%); // Very dark blue
+$purple-theme-text-color-2: hsl(0, 0%, 100%); // white
+$purple-theme-text-color-3: hsl(52, 100%, 62%); // Light yellow

@@ -22,7 +22,8 @@
 
     </style>
 </head>
-<body>
+<body onload="checkUserTheme()">
+<!-- <body> -->
   <div id="app">
 
 
@@ -43,9 +44,9 @@
               </div>
               <div class="toggle">
                 <div class="toggle-btn-con">
-                  <button type="button"></button>
-                  <button type="button"></button>
-                  <button type="button"></button>
+                  <button type="button" onclick="setTheme('dark')"></button>
+                  <button type="button" onclick="setTheme('light')"></button>
+                  <button type="button" onclick="setTheme('purple')"></button>
                 </div>
                 
                 <span class="indicator"></span>
@@ -63,28 +64,28 @@
         
         <!-- calculator keypad starts here -->
         <div class="calculator-keypad">
-          <button type="button" class="key key-3">7</button>
-          <button type="button" class="key key-3">8</button>
-          <button type="button" class="key key-3">9</button>
-          <button type="button" class="key key-1">DEL</button>
+          <button type="button" class="key key-3"><span>7</span></button>
+          <button type="button" class="key key-3"><span>8</span></button>
+          <button type="button" class="key key-3"><span>9</span></button>
+          <button type="button" class="key key-1"><span>DEL</span></button>
 
-          <button type="button" class="key key-3">4</button>
-          <button type="button" class="key key-3">5</button>
-          <button type="button" class="key key-3">6</button>
-          <button type="button" class="key key-3">+</button>
+          <button type="button" class="key key-3"><span>4</span></button>
+          <button type="button" class="key key-3"><span>5</span></button>
+          <button type="button" class="key key-3"><span>6</span></button>
+          <button type="button" class="key key-3"><span>+</span></button>
 
-          <button type="button" class="key key-3">1</button>
-          <button type="button" class="key key-3">2</button>
-          <button type="button" class="key key-3">3</button>
-          <button type="button" class="key key-3">-</button>
+          <button type="button" class="key key-3"><span>1</span></button>
+          <button type="button" class="key key-3"><span>2</span></button>
+          <button type="button" class="key key-3"><span>3</span></button>
+          <button type="button" class="key key-3"><span>-</span></button>
 
-          <button type="button" class="key key-3">.</button>
-          <button type="button" class="key key-3">0</button>
-          <button type="button" class="key key-3">/</button>
-          <button type="button" class="key key-3">%</button>
+          <button type="button" class="key key-3"><span>.</span></button>
+          <button type="button" class="key key-3"><span>0</span></button>
+          <button type="button" class="key key-3"><span>/</span></button>
+          <button type="button" class="key key-3"><span>x</span></button>
 
-          <button type="button" class="key key-1">RESET</button>
-          <button type="button" class="key key-2">=</button>
+          <button type="button" class="key key-1"><span>RESET</span></button>
+          <button type="button" class="key key-2"><span>=</span></button>
         </div>
         <!-- calculator keypad ends here -->
       </div>
@@ -96,16 +97,47 @@
   
   
   <script>
+    
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      
+      // save the user preference
+      localStorage.setItem("theme", theme)
+    }
   
-    const app = Vue.createApp({
-      data() {
-        return {
-          message: "Hello World!"
+    // document.querySelector('body').addEventListener("load", function () {
+    //   console.log(1133);
+    // });
+
+    function checkUserTheme() {
+      let savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme) {
+        // if the user has visited the site and saved a theme
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else{
+        // if not check if the user is using light or dark mode in his browser
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme : dark)').matches;
+        if (prefersDarkMode) {
+          setTheme('dark');
+        } else {
+          setTheme('light');
         }
       }
-    })
+    }
+
+
+    // const app = Vue.createApp({
+    //   data() {
+    //     return {
+    //       message: "Hello World!"
+    //     }
+    //   }
+    // })
   
-    app.mount('#app')
+    // app.mount('#app');
+
   
   </script>
 </body>

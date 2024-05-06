@@ -1,5 +1,102 @@
-.general-text {
+:root[data-theme=dark] .general-text-color, :root[data-theme=dark] .calculator-screen .calculator-screen-text, :root[data-theme=dark] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=dark] .calculator-top .right .theme-text, :root[data-theme=dark] .calculator-top .heading-text {
   color: hsl(0, 0%, 100%);
+}
+:root[data-theme=dark] .main-bg-color, :root[data-theme=dark] body {
+  background-color: hsl(222, 26%, 31%);
+}
+:root[data-theme=dark] .pad-and-toggle-bg-color, :root[data-theme=dark] .calculator-keypad, :root[data-theme=dark] .calculator-top .right .toggle-container .toggle {
+  background-color: hsl(223, 31%, 20%);
+}
+:root[data-theme=dark] .screen-bg-color, :root[data-theme=dark] .calculator-screen {
+  background-color: hsl(224, 36%, 15%);
+}
+:root[data-theme=dark] .toggle .indicator {
+  background-color: hsl(6, 63%, 50%);
+}
+:root[data-theme=dark] .key-1-theme-color, :root[data-theme=dark] .calculator-keypad .key.key-1 {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 3px hsl(224, 28%, 35%);
+}
+:root[data-theme=dark] .key-2-theme-color, :root[data-theme=dark] .calculator-keypad .key.key-2 {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0 3px hsl(6, 70%, 34%);
+}
+:root[data-theme=dark] .key-3-theme-color, :root[data-theme=dark] .calculator-keypad .key.key-3 {
+  color: hsl(221, 14%, 31%);
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0 3px hsl(28, 16%, 65%);
+}
+
+:root[data-theme=light] .general-text-color, :root[data-theme=light] .calculator-screen .calculator-screen-text, :root[data-theme=light] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=light] .calculator-top .right .theme-text, :root[data-theme=light] .calculator-top .heading-text {
+  color: hsl(60, 10%, 19%);
+}
+:root[data-theme=light] .main-bg-color, :root[data-theme=light] body {
+  background-color: hsl(0, 0%, 90%);
+}
+:root[data-theme=light] .pad-and-toggle-bg-color, :root[data-theme=light] .calculator-keypad, :root[data-theme=light] .calculator-top .right .toggle-container .toggle {
+  background-color: hsl(0, 5%, 81%);
+}
+:root[data-theme=light] .screen-bg-color, :root[data-theme=light] .calculator-screen {
+  background-color: hsl(0, 0%, 93%);
+}
+:root[data-theme=light] .toggle .indicator {
+  background-color: hsl(25, 98%, 40%);
+}
+:root[data-theme=light] .key-1-theme-color, :root[data-theme=light] .calculator-keypad .key.key-1 {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 3px hsl(185, 58%, 25%);
+}
+:root[data-theme=light] .key-2-theme-color, :root[data-theme=light] .calculator-keypad .key.key-2 {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 3px hsl(6, 70%, 34%);
+}
+:root[data-theme=light] .key-3-theme-color, :root[data-theme=light] .calculator-keypad .key.key-3 {
+  color: hsl(221, 14%, 31%);
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0 3px hsl(35, 11%, 61%);
+}
+
+:root[data-theme=purple] .general-text-color, :root[data-theme=purple] .calculator-screen .calculator-screen-text, :root[data-theme=purple] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=purple] .calculator-top .right .theme-text, :root[data-theme=purple] .calculator-top .heading-text {
+  color: hsl(52, 100%, 62%);
+}
+:root[data-theme=purple] .main-bg-color, :root[data-theme=purple] body {
+  background-color: hsl(268, 75%, 9%);
+}
+:root[data-theme=purple] .pad-and-toggle-bg-color, :root[data-theme=purple] .calculator-keypad, :root[data-theme=purple] .calculator-top .right .toggle-container .toggle {
+  background-color: hsl(268, 71%, 12%);
+}
+:root[data-theme=purple] .screen-bg-color, :root[data-theme=purple] .calculator-screen {
+  background-color: hsl(268, 71%, 12%);
+}
+:root[data-theme=purple] .toggle .indicator {
+  background-color: hsl(176, 100%, 44%);
+}
+:root[data-theme=purple] .key-1-theme-color, :root[data-theme=purple] .calculator-keypad .key.key-1 {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 3px hsl(285, 91%, 52%);
+}
+:root[data-theme=purple] .key-2-theme-color, :root[data-theme=purple] .calculator-keypad .key.key-2 {
+  color: hsl(60, 10%, 19%);
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0 3px hsl(177, 92%, 70%);
+}
+:root[data-theme=purple] .key-3-theme-color, :root[data-theme=purple] .calculator-keypad .key.key-3 {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0 3px hsl(290, 70%, 36%);
+}
+
+.food {
+  background-color: hsl(222, 26%, 31%);
+}
+
+:root.light .food {
+  background-color: red;
 }
 
 * {
@@ -7,15 +104,15 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
+  transition: 0.2s color, 0.2s background-color;
 }
 
 body {
   font-weight: 700;
-  background-color: hsl(222, 26%, 31%);
 }
 
 main {
-  padding: 110px 14px;
+  padding: 115px 14px;
 }
 
 .calculator-container {
@@ -27,21 +124,21 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
 }
 .calculator-top .heading-text {
   font-size: 30px;
-  color: hsl(0, 0%, 100%);
+  margin-left: 9px;
 }
 .calculator-top .right {
   display: flex;
   align-items: center;
 }
 .calculator-top .right .theme-text {
-  color: hsl(0, 0%, 100%);
-  margin-right: 20px;
+  margin-right: 24px;
   letter-spacing: 2px;
   font-size: 11px;
+  font-weight: 600;
 }
 .calculator-top .right .toggle-container {
   position: relative;
@@ -57,13 +154,11 @@ main {
 .calculator-top .right .toggle-container .toggle-number-con span {
   flex-grow: 1;
   text-align: center;
-  color: hsl(0, 0%, 100%);
-  font-size: 12px;
+  font-size: 11px;
 }
 .calculator-top .right .toggle-container .toggle {
   width: 70px;
   height: 24px;
-  background-color: hsl(223, 31%, 20%);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -76,11 +171,21 @@ main {
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
-  height: 14px;
-  width: 14px;
-  background-color: hsl(6, 63%, 50%);
+  height: 15px;
+  width: 15px;
+  transition: 0.3s;
   border-radius: 50%;
   cursor: pointer;
+}
+.calculator-top .right .toggle-container .toggle .indicator:hover {
+  filter: brightness(1.5);
+}
+:root[data-theme=light] .calculator-top .right .toggle-container .toggle .indicator {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+:root[data-theme=purple] .calculator-top .right .toggle-container .toggle .indicator {
+  left: calc(100% - 20px);
 }
 .calculator-top .right .toggle-container .toggle .toggle-btn-con {
   position: absolute;
@@ -95,23 +200,20 @@ main {
 
 .calculator-screen {
   padding: 40px 30px;
-  background-color: hsl(224, 36%, 15%);
   border-radius: 10px;
   margin-bottom: 25px;
 }
 .calculator-screen .calculator-screen-text {
-  color: hsl(0, 0%, 100%);
   text-align: right;
-  font-size: 48px;
+  font-size: 55px;
 }
 
 .calculator-keypad {
   padding: 30px;
   border-radius: 10px;
-  background-color: hsl(223, 31%, 20%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 25px 24px;
   font-weight: 700;
 }
 .calculator-keypad .key {
@@ -119,30 +221,25 @@ main {
   height: 60px;
   padding: 12px 10px;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.2s;
 }
 .calculator-keypad .key.key-1 {
   font-size: 29px;
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0 3px hsl(224, 28%, 35%);
-  color: hsl(0, 0%, 100%);
 }
 .calculator-keypad .key.key-2 {
-  font-size: 33px;
-  background-color: hsl(6, 63%, 50%);
-  box-shadow: 0 3px hsl(6, 70%, 34%);
-  color: hsl(0, 0%, 100%);
+  font-size: 32px;
 }
 .calculator-keypad .key.key-3 {
-  font-size: 33px;
-  background-color: hsl(30, 25%, 89%);
-  box-shadow: 0 3px hsl(28, 16%, 65%);
+  font-size: 39px;
 }
 .calculator-keypad .key:hover {
-  filter: brightness(1.3);
+  filter: brightness(1.5);
 }
 .calculator-keypad .key:nth-child(17), .calculator-keypad .key:nth-child(18) {
   grid-column: span 2;

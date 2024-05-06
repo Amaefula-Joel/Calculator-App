@@ -1,5 +1,86 @@
 @import 'varaibles';
 
-.general-text{
-    color: $text-color-2;
+
+:root[data-theme=dark] {
+    .general-text-color{ color: $dark-theme-text-color-2; }
+
+    .main-bg-color{ background-color: $dark-theme-bg-color-100; }
+
+    .pad-and-toggle-bg-color{ background-color: $dark-theme-bg-color-200; }
+
+    .screen-bg-color{ background-color: $dark-theme-bg-color-300; }
+
+    .toggle .indicator{ background-color: $dark-theme-key2-color; }
+
+    .key-1-theme-color{
+        color: $dark-theme-text-color-2;
+        background-color: $dark-theme-key1-color;
+        box-shadow: 0 3px $dark-theme-key1-shadow-color;
+    }
+    .key-2-theme-color{
+        color: $dark-theme-text-color-2;
+        background-color: $dark-theme-key2-color;
+        box-shadow: 0 3px $dark-theme-key2-shadow-color;
+    }
+    .key-3-theme-color{
+        color: $dark-theme-text-color-1;
+        background-color: $dark-theme-key3-color;
+        box-shadow: 0 3px $dark-theme-key3-shadow-color;
+    }
+}
+
+:root[data-theme=light]{
+    .general-text-color{ color: $light-theme-text-color-1; }
+
+    .main-bg-color{ background-color: $light-theme-bg-color-100; }
+
+    .pad-and-toggle-bg-color{ background-color: $light-theme-bg-color-200; }
+
+    .screen-bg-color{ background-color: $light-theme-bg-color-300; }
+
+    .toggle .indicator{ background-color: $light-theme-key2-color; }
+
+    .key-1-theme-color{
+        color: $light-theme-text-color-2;
+        background-color: $light-theme-key1-color;
+        box-shadow: 0 3px $light-theme-key1-shadow-color;
+    }
+    .key-2-theme-color{
+        color: $light-theme-text-color-2;
+        background-color: $light-theme-key2-color;
+        box-shadow: 0 3px $dark-theme-key2-shadow-color;
+    }
+    .key-3-theme-color{
+        color: $dark-theme-text-color-1;
+        background-color: $light-theme-key3-color;
+        box-shadow: 0 3px $light-theme-key3-shadow-color;
+    }
+}
+
+:root[data-theme=purple]{
+    .general-text-color{ color: $purple-theme-text-color-3; }
+
+    .main-bg-color{ background-color: $purple-theme-bg-color-100; }
+
+    .pad-and-toggle-bg-color{ background-color: $purple-theme-bg-color-200; }
+
+    .screen-bg-color{ background-color: $purple-theme-bg-color-200; }
+
+    .toggle .indicator{ background-color: $purple-theme-key2-color; }
+
+    .key-1-theme-color{
+        color: $purple-theme-text-color-2;
+        background-color: $purple-theme-key1-color;
+        box-shadow: 0 3px $purple-theme-key1-shadow-color;
+    }
+    .key-2-theme-color{
+        color: $purple-theme-text-color-1;
+        background-color: $purple-theme-key2-color;
+        box-shadow: 0 3px $purple-theme-key2-shadow-color;
+    }
+    .key-3-theme-color{
+        color: $purple-theme-text-color-3;
+        background-color: $purple-theme-key3-color;
+        box-shadow: 0 3px $purple-theme-key3-shadow-color;
+    }
 }
