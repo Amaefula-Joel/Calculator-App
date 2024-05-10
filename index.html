@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +22,7 @@
 
     </style>
 </head>
-<body onload="checkUserTheme()">
-<!-- <body> -->
+<body>
   <div id="app">
 
 
@@ -44,9 +43,9 @@
               </div>
               <div class="toggle">
                 <div class="toggle-btn-con">
-                  <button type="button" onclick="setTheme('dark')"></button>
-                  <button type="button" onclick="setTheme('light')"></button>
-                  <button type="button" onclick="setTheme('purple')"></button>
+                  <button type="button" @click="setTheme('dark')"></button>
+                  <button type="button" @click="setTheme('light')"></button>
+                  <button type="button" @click="setTheme('purple')"></button>
                 </div>
                 
                 <span class="indicator"></span>
@@ -58,85 +57,163 @@
 
         <!-- calculator output starts here -->
         <div class="calculator-screen">
-          <p class="calculator-screen-text">399,981</p>
+          <!-- <p class="calculator-screen-result">{{expression}}</p> -->
+          <input class="calculator-screen-result" type="text" v-model="expression" readonly minlength="10">
         </div>
         <!-- calculator output ends here -->
         
         <!-- calculator keypad starts here -->
         <div class="calculator-keypad">
-          <button type="button" class="key key-3"><span>7</span></button>
-          <button type="button" class="key key-3"><span>8</span></button>
-          <button type="button" class="key key-3"><span>9</span></button>
-          <button type="button" class="key key-1"><span>DEL</span></button>
+          <button type="button" class="key key-3"  @click="addToExpression('7')"><span>7</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('8')"><span>8</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('9')"><span>9</span></button>
+          <button type="button" class="key key-1" @click="deleteChar"><span>DEL</span></button>
 
-          <button type="button" class="key key-3"><span>4</span></button>
-          <button type="button" class="key key-3"><span>5</span></button>
-          <button type="button" class="key key-3"><span>6</span></button>
-          <button type="button" class="key key-3"><span>+</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('4')"><span>4</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('5')"><span>5</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('6')"><span>6</span></button>
+          <button type="button" class="key key-3" @click="addOperator('+')"><span>+</span></button>
 
-          <button type="button" class="key key-3"><span>1</span></button>
-          <button type="button" class="key key-3"><span>2</span></button>
-          <button type="button" class="key key-3"><span>3</span></button>
-          <button type="button" class="key key-3"><span>-</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('1')"><span>1</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('2')"><span>2</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('3')"><span>3</span></button>
+          <button type="button" class="key key-3" @click="addOperator('-')"><span>-</span></button>
 
-          <button type="button" class="key key-3"><span>.</span></button>
-          <button type="button" class="key key-3"><span>0</span></button>
-          <button type="button" class="key key-3"><span>/</span></button>
-          <button type="button" class="key key-3"><span>x</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('.')"><span>.</span></button>
+          <button type="button" class="key key-3" @click="addToExpression('0')"><span>0</span></button>
+          <button type="button" class="key key-3" @click="addOperator('/')"><span>/</span></button>
+          <button type="button" class="key key-3" @click="addOperator('*')"><span>x</span></button>
 
-          <button type="button" class="key key-1"><span>RESET</span></button>
-          <button type="button" class="key key-2"><span>=</span></button>
+          <button type="button" class="key key-1" @click="clear" ><span>RESET</span></button>
+          <button type="button" class="key key-2" @click="calculate"><span>=</span></button>
         </div>
         <!-- calculator keypad ends here -->
       </div>
     </main>
-
-    <!-- {{message}} -->
   </div>
 
   
   
   <script>
-    
 
-    function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      
-      // save the user preference
-      localStorage.setItem("theme", theme)
-    }
-  
-    // document.querySelector('body').addEventListener("load", function () {
-    //   console.log(1133);
-    // });
-
-    function checkUserTheme() {
-      let savedTheme = localStorage.getItem("theme");
-
-      if (savedTheme) {
-        // if the user has visited the site and saved a theme
-        document.documentElement.setAttribute('data-theme', savedTheme);
-      } else{
-        // if not check if the user is using light or dark mode in his browser
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme : dark)').matches;
-        if (prefersDarkMode) {
-          setTheme('dark');
-        } else {
-          setTheme('light');
+    const app = Vue.createApp({
+      data() {
+        return {
+          expression: '',
+          lastCharIsOperator: false,
+          lastCharIsDecimal: false,
+          error: false
         }
-      }
-    }
+      },
+      computed:{
+        isOperatorPresent() {
+          // this will check the expression has any operator
+          const hasSign = this.expression.includes('-') || this.expression.includes('*') || this.expression.includes('+') || this.expression.includes('/');
 
+          return hasSign;
+        },
+        endsWithOperator() {
+          const operatorRegex = /[+\-*\/]$/;
+          return operatorRegex.test(this.expression);
+        }
+      },
+      methods: {
+        checkUserTheme() {
+          let savedTheme = localStorage.getItem("theme");
 
-    // const app = Vue.createApp({
-    //   data() {
-    //     return {
-    //       message: "Hello World!"
-    //     }
-    //   }
-    // })
+          if (savedTheme) {
+            // if the user has visited the site and saved a theme
+            document.documentElement.setAttribute('data-theme', savedTheme);
+          } else{
+            // if not check if the user is using light or dark mode in his browser
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme : dark)').matches;
+            if (prefersDarkMode) {
+              this.setTheme('dark');
+            } else {
+              this.setTheme('light');
+            }
+          }
+        },
+        setTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          
+          // save the user preference
+          localStorage.setItem("theme", theme)
+        },
+        addToExpression(char) {
+          
+          if (!this.error) { // checks if there is an error before proceding
+            if (char === '.') { //if character is a decimal point
   
-    // app.mount('#app');
+              if (!this.lastCharIsDecimal) { // check if the last character was not a decimal
+                this.expression += char;
+                this.lastCharIsDecimal = true
+              } else{ // if the last character was a decimal, then leave function
+                return;
+              }
+  
+            } else{ // if the character is a number
+              this.expression += char;
+            }
+  
+          }
+
+        },
+        addOperator(operator) {
+
+          if (!this.error) { // checks if there is an error before proceding
+            
+            if (!this.isOperatorPresent) {
+              this.expression += operator;
+              this.lastCharIsDecimal = false // allow thw user to input a decimal point for the next character
+            } else if (this.isOperatorPresent && !this.endsWithOperator) { 
+              // this will make the current expression be calculated before adding a new operator
+              this.calculate();
+              this.expression += operator;
+            }
+
+          }
+        },
+        calculate() {
+
+          if (!this.error) { // checks if there is an error before proceding
+            
+            try {
+              // if (!this.lastCharIsOperator) {
+              if (!this.endsWithOperator) {
+                let result = eval(this.expression).toString(); // evaluate expression
+
+                if (result === 'NaN' || result === 'infinity') {
+                  this.error = true;
+                }
+              
+                // result = Number(result).toFixed(5); // round up to 5 decimal place
+    
+                this.expression = result;
+              }
+            } catch (error) {
+              this.expression = error.name;
+              this.error = true;
+            }
+
+          }
+
+        },
+        deleteChar () {
+          if (!this.error) { // checks if there is an error before proceding
+            this.expression = this.expression.slice(0, -1);
+          }
+        },
+        clear() {
+          this.expression = '';
+        }
+      },
+      mounted () {
+        this.checkUserTheme();
+      }
+    })
+  
+    app.mount('#app');
 
   
   </script>

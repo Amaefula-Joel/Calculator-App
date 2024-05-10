@@ -1,4 +1,4 @@
-:root[data-theme=dark] .general-text-color, :root[data-theme=dark] .calculator-screen .calculator-screen-text, :root[data-theme=dark] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=dark] .calculator-top .right .theme-text, :root[data-theme=dark] .calculator-top .heading-text {
+:root[data-theme=dark] .general-text-color, :root[data-theme=dark] .calculator-screen input.calculator-screen-result, :root[data-theme=dark] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=dark] .calculator-top .right .theme-text, :root[data-theme=dark] .calculator-top .heading-text {
   color: hsl(0, 0%, 100%);
 }
 :root[data-theme=dark] .main-bg-color, :root[data-theme=dark] body {
@@ -29,7 +29,7 @@
   box-shadow: 0 3px hsl(28, 16%, 65%);
 }
 
-:root[data-theme=light] .general-text-color, :root[data-theme=light] .calculator-screen .calculator-screen-text, :root[data-theme=light] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=light] .calculator-top .right .theme-text, :root[data-theme=light] .calculator-top .heading-text {
+:root[data-theme=light] .general-text-color, :root[data-theme=light] .calculator-screen input.calculator-screen-result, :root[data-theme=light] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=light] .calculator-top .right .theme-text, :root[data-theme=light] .calculator-top .heading-text {
   color: hsl(60, 10%, 19%);
 }
 :root[data-theme=light] .main-bg-color, :root[data-theme=light] body {
@@ -60,7 +60,7 @@
   box-shadow: 0 3px hsl(35, 11%, 61%);
 }
 
-:root[data-theme=purple] .general-text-color, :root[data-theme=purple] .calculator-screen .calculator-screen-text, :root[data-theme=purple] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=purple] .calculator-top .right .theme-text, :root[data-theme=purple] .calculator-top .heading-text {
+:root[data-theme=purple] .general-text-color, :root[data-theme=purple] .calculator-screen input.calculator-screen-result, :root[data-theme=purple] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=purple] .calculator-top .right .theme-text, :root[data-theme=purple] .calculator-top .heading-text {
   color: hsl(52, 100%, 62%);
 }
 :root[data-theme=purple] .main-bg-color, :root[data-theme=purple] body {
@@ -112,7 +112,7 @@ body {
 }
 
 main {
-  padding: 115px 14px;
+  padding: 109px 14px;
 }
 
 .calculator-container {
@@ -127,15 +127,15 @@ main {
   margin-bottom: 29px;
 }
 .calculator-top .heading-text {
-  font-size: 30px;
-  margin-left: 9px;
+  font-size: 31px;
+  margin-left: 7px;
 }
 .calculator-top .right {
   display: flex;
   align-items: center;
 }
 .calculator-top .right .theme-text {
-  margin-right: 24px;
+  margin-right: 26px;
   letter-spacing: 2px;
   font-size: 11px;
   font-weight: 600;
@@ -149,16 +149,16 @@ main {
   bottom: 100%;
   left: 0;
   width: 100%;
-  margin-bottom: 7px;
+  margin-bottom: 3px;
 }
 .calculator-top .right .toggle-container .toggle-number-con span {
   flex-grow: 1;
   text-align: center;
-  font-size: 11px;
+  font-size: 16px;
 }
 .calculator-top .right .toggle-container .toggle {
   width: 70px;
-  height: 24px;
+  height: 25px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -171,8 +171,8 @@ main {
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
-  height: 15px;
-  width: 15px;
+  height: 16px;
+  width: 16px;
   transition: 0.3s;
   border-radius: 50%;
   cursor: pointer;
@@ -203,9 +203,14 @@ main {
   border-radius: 10px;
   margin-bottom: 25px;
 }
-.calculator-screen .calculator-screen-text {
+.calculator-screen input.calculator-screen-result {
   text-align: right;
   font-size: 55px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  outline: none;
 }
 
 .calculator-keypad {
@@ -213,12 +218,12 @@ main {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 25px 24px;
+  gap: 27px 24px;
   font-weight: 700;
 }
 .calculator-keypad .key {
   grid-column: span 1;
-  height: 60px;
+  height: 61px;
   padding: 12px 10px;
   font-weight: 700;
   border-radius: 10px;

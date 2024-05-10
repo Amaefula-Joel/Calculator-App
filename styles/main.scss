@@ -1,4 +1,3 @@
-@import 'mixins';
 @import 'varaibles';
 @import 'media_query';
 @import 'theme_control_class';
@@ -32,7 +31,7 @@ body{
 }
 
 main{
-    padding: 115px 14px;
+    padding: 109px 14px;
     // @extend .food; 
 }
 
@@ -40,10 +39,6 @@ main{
     max-width: 540px;
     margin: 0 auto;
 }
-// .heading-text,
-// .theme-text{
-//     @extend .general-text;
-// }
 
 .calculator-top{
     display: flex;
@@ -52,9 +47,8 @@ main{
     margin-bottom: 29px;
 
     .heading-text{
-        font-size: 30px;
-        margin-left: 9px;
-        // color: $dark-theme-text-color-2;
+        font-size: 31px;
+        margin-left: 7px;
         @extend .general-text-color;
     }
 
@@ -65,7 +59,7 @@ main{
         .theme-text{
             // color: $dark-theme-text-color-2;
             @extend .general-text-color;
-            margin-right: 24px;
+            margin-right: 26px;
             letter-spacing: 2px;
             font-size: 11px;
             font-weight: 600;
@@ -81,20 +75,20 @@ main{
                 bottom: 100%;
                 left: 0;
                 width: 100%;
-                margin-bottom: 7px;
+                margin-bottom: 3px;
                 span{
                     flex-grow: 1;
                     text-align: center;
                     // color: $dark-theme-text-color-2;
                     @extend .general-text-color;
-                    font-size: 11px;
+                    font-size: 16px;
                 }
             }
 
             // actual toggle
             .toggle{
                 width: 70px;
-                height: 24px;
+                height: 25px;
                 // background-color: $dark-theme-bg-color-200;
                 @extend .pad-and-toggle-bg-color;
                 border-radius: 20px;
@@ -109,8 +103,8 @@ main{
                     top: 50%;
                     transform: translateY(-50%);
                     display: inline-block;
-                    height: 15px;
-                    width: 15px;
+                    height: 16px;
+                    width: 16px;
                     // background-color: $dark-theme-key2-color;
                     transition: .3s;
                     border-radius: 50%;
@@ -153,27 +147,32 @@ main{
     border-radius: 10px;
     margin-bottom: 25px;
 
-    .calculator-screen-text{
-        // color: $dark-theme-text-color-2;
-        @extend .general-text-color;
+    // p.calculator-screen-result{
+    input.calculator-screen-result{
+        @extend .general-text-color; 
         text-align: right;
         font-size: 55px;
+        width: 100%;
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        outline: none;
+        // overflow: scroll;
     }
 }
 
 .calculator-keypad{
     padding: 30px;
     border-radius: 10px;
-    // background-color: $dark-theme-bg-color-200;
     @extend .pad-and-toggle-bg-color;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 25px 24px;
+    gap: 27px 24px;
     font-weight: 700;
 
     .key{
         grid-column: span 1;
-        height: 60px;
+        height: 61px;
         padding: 12px 10px;
         font-weight: 700;
         border-radius: 10px;
