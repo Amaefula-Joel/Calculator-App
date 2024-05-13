@@ -58,7 +58,7 @@
         <!-- calculator output starts here -->
         <div class="calculator-screen">
           <!-- <p class="calculator-screen-result">{{expression}}</p> -->
-          <input class="calculator-screen-result" type="text" v-model="expression" readonly minlength="10">
+          <input class="calculator-screen-result" type="text" v-model="result" readonly minlength="10">
         </div>
         <!-- calculator output ends here -->
         
@@ -99,13 +99,22 @@
     const app = Vue.createApp({
       data() {
         return {
-          expression: '',
+          expression: '399981',
           lastCharIsOperator: false,
           lastCharIsDecimal: false,
           error: false
         }
       },
       computed:{
+        result() {
+          // if the expression is empty it returns 0
+          if (this.expression === '') { return 0; }
+
+          // this adds the comma 
+          const parts = this.expression.split('.');
+          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          return parts.join(".");
+        },
         isOperatorPresent() {
           // this will check the expression has any operator
           const hasSign = this.expression.includes('-') || this.expression.includes('*') || this.expression.includes('+') || this.expression.includes('/');

@@ -215,7 +215,6 @@ main {
 
 .calculator-keypad {
   padding: 30px;
-  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 27px 24px;
@@ -248,4 +247,38 @@ main {
 }
 .calculator-keypad .key:nth-child(17), .calculator-keypad .key:nth-child(18) {
   grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 38px 23px;
+  }
+  .calculator-top {
+    margin-bottom: 34px;
+  }
+  .calculator-top .right .toggle-container .toggle-number-con span {
+    font-size: 13px;
+  }
+  .calculator-screen {
+    padding: 27px 23px;
+  }
+  .calculator-screen input.calculator-screen-result {
+    font-size: 40px;
+  }
+  .calculator-keypad {
+    padding: 24px 25px;
+    gap: 16px 12px;
+  }
+  .calculator-keypad .key {
+    border-radius: 5px;
+  }
+  .calculator-keypad .key.key-1 {
+    font-size: 19px;
+  }
+  .calculator-keypad .key.key-2 {
+    font-size: 19px;
+  }
+  .calculator-keypad .key.key-3 {
+    font-size: 29px;
+  }
 }/*# sourceMappingURL=main.css.map */
