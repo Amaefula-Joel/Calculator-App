@@ -148,7 +148,7 @@ main{
     margin-bottom: 25px;
 
     // p.calculator-screen-result{
-    input.calculator-screen-result{
+    .calculator-screen-result{
         @extend .general-text-color; 
         text-align: right;
         font-size: 55px;
@@ -157,7 +157,7 @@ main{
         background: transparent;
         font-weight: 600;
         outline: none;
-        // overflow: scroll;
+        overflow-x: auto;
     }
 }
 
@@ -181,6 +181,7 @@ main{
         align-items: center;
         justify-content: center;
         transition: .2s;
+        user-select: none;
 
         &.key-1{ // the DEL and RESET keys
             font-size: 29px;
@@ -222,7 +223,7 @@ main{
     .calculator-screen{
         padding: 27px 23px;
 
-        input.calculator-screen-result{
+        .calculator-screen-result{
             font-size: 40px;
         }
     }

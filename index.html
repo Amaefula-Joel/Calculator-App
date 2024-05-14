@@ -57,8 +57,8 @@
 
         <!-- calculator output starts here -->
         <div class="calculator-screen">
-          <!-- <p class="calculator-screen-result">{{expression}}</p> -->
-          <input class="calculator-screen-result" type="text" v-model="result" readonly minlength="10">
+          <p class="calculator-screen-result">{{result}}</p>
+          <!-- <input class="calculator-screen-result" type="text" v-model="result" readonly> -->
         </div>
         <!-- calculator output ends here -->
         
@@ -192,7 +192,7 @@
               if (!this.endsWithOperator) {
                 let result = eval(this.expression).toString(); // evaluate expression
 
-                if (result === 'NaN' || result === 'infinity') {
+                if (result === 'NaN' || result === 'Infinity') {
                   this.error = true;
                 }
               
