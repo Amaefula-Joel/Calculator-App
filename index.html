@@ -2,6 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Joel Amaefula">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -30,7 +31,7 @@
       <div class="calculator-container">
         <!-- calculator top starts here -->
         <div class="calculator-top">
-          <h2 class="heading-text">calc</h2>
+          <h1 class="heading-text">calc</h1>
 
           <div class="right">
             <p class="theme-text">THEME</p>
@@ -43,9 +44,9 @@
               </div>
               <div class="toggle">
                 <div class="toggle-btn-con">
-                  <button type="button" @click="setTheme('dark')"></button>
-                  <button type="button" @click="setTheme('light')"></button>
-                  <button type="button" @click="setTheme('purple')"></button>
+                  <button type="button" @click="setTheme('dark')"><span class="visually-hidden">Theme 1</span></button>
+                  <button type="button" @click="setTheme('light')"><span class="visually-hidden">Theme 2</span></button>
+                  <button type="button" @click="setTheme('purple')"><span class="visually-hidden">Theme 3</span></button>
                 </div>
                 
                 <span class="indicator"></span>
