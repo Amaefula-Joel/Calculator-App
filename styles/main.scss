@@ -243,3 +243,11 @@ main{
         }
     }
 }
+
+.attribution{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    @extend .general-text-color;
+    a { color: hsl(228, 45%, 44%); }
+}

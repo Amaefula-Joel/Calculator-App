@@ -1,4 +1,4 @@
-:root[data-theme=dark] .general-text-color, :root[data-theme=dark] .calculator-screen .calculator-screen-result, :root[data-theme=dark] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=dark] .calculator-top .right .theme-text, :root[data-theme=dark] .calculator-top .heading-text {
+:root[data-theme=dark] .general-text-color, :root[data-theme=dark] .attribution, :root[data-theme=dark] .calculator-screen .calculator-screen-result, :root[data-theme=dark] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=dark] .calculator-top .right .theme-text, :root[data-theme=dark] .calculator-top .heading-text {
   color: hsl(0, 0%, 100%);
 }
 :root[data-theme=dark] .main-bg-color, :root[data-theme=dark] body {
@@ -29,7 +29,7 @@
   box-shadow: 0 3px hsl(28, 16%, 65%);
 }
 
-:root[data-theme=light] .general-text-color, :root[data-theme=light] .calculator-screen .calculator-screen-result, :root[data-theme=light] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=light] .calculator-top .right .theme-text, :root[data-theme=light] .calculator-top .heading-text {
+:root[data-theme=light] .general-text-color, :root[data-theme=light] .attribution, :root[data-theme=light] .calculator-screen .calculator-screen-result, :root[data-theme=light] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=light] .calculator-top .right .theme-text, :root[data-theme=light] .calculator-top .heading-text {
   color: hsl(60, 10%, 19%);
 }
 :root[data-theme=light] .main-bg-color, :root[data-theme=light] body {
@@ -60,7 +60,7 @@
   box-shadow: 0 3px hsl(35, 11%, 61%);
 }
 
-:root[data-theme=purple] .general-text-color, :root[data-theme=purple] .calculator-screen .calculator-screen-result, :root[data-theme=purple] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=purple] .calculator-top .right .theme-text, :root[data-theme=purple] .calculator-top .heading-text {
+:root[data-theme=purple] .general-text-color, :root[data-theme=purple] .attribution, :root[data-theme=purple] .calculator-screen .calculator-screen-result, :root[data-theme=purple] .calculator-top .right .toggle-container .toggle-number-con span, :root[data-theme=purple] .calculator-top .right .theme-text, :root[data-theme=purple] .calculator-top .heading-text {
   color: hsl(52, 100%, 62%);
 }
 :root[data-theme=purple] .main-bg-color, :root[data-theme=purple] body {
@@ -285,4 +285,12 @@ main {
   .calculator-keypad .key.key-3 {
     font-size: 29px;
   }
+}
+.attribution {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=main.css.map */
